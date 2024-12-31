@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A mono repo template with all the essentials",
   "private": true,
+  "scripts": {
+    "prepare": "husky"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tinyknightofcoding/chimera.git"
@@ -12,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/tinyknightofcoding/chimera/issues"
   },
-  "homepage": "https://github.com/tinyknightofcoding/chimera#readme"
+  "homepage": "https://github.com/tinyknightofcoding/chimera#readme",
+  "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
 }
