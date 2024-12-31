@@ -1,0 +1,13 @@
+name: integration
+on: pull_request
+concurrency:
+  group: ci_${{ github.head_ref || github.ref || github.run_id }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
