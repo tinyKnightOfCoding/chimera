@@ -1,0 +1,16 @@
+{
+  "name": "chimera",
+  "version": "1.0.0",
+  "description": "A mono repo template with all the essentials",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinyknightofcoding/chimera.git"
+  },
+  "author": "Kenneth Radunz",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/tinyknightofcoding/chimera/issues"
+  },
+  "homepage": "https://github.com/tinyknightofcoding/chimera#readme"
+}
