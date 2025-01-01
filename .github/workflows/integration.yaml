@@ -19,5 +19,12 @@ jobs:
           node-version-file: .nvmrc
           cache-dependency-path: pnpm-lock.yaml
           cache: pnpm
+      - name: setup cache
+        uses: actions/cache@v4
+        with:
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml', '.prettierrc.yaml') }}
+          path: ./node_modules/.cache
       - name: install dependencies
         run: pnpm i --frozen-lockfile
+      - name: check formatting
+        run: pnpm format:ci
