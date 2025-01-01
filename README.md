@@ -13,5 +13,3 @@ Have a template for creating new repos with all the essentials. This should incl
 - some helpers and utils
 - continuous deployment (?)
 - infrastructure as code (?)
-
-testting
