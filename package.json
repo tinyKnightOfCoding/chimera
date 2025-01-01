@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "prepare": "husky",
-    "format": "prettier --write --ignore-unknown ."
+    "format": "prettier --write --ignore-unknown .",
+    "format:ci": "prettier --check --ignore-unknown --cache --cache-strategy=content ."
   },
   "repository": {
     "type": "git",
