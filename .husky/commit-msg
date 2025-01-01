@@ -1,1 +1,1 @@
-pnpm lint-commit --edit ${1}
+pnpm lint-commit --verbose --edit ${1}
