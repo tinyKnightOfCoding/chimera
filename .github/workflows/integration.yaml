@@ -26,6 +26,8 @@ jobs:
           path: ./node_modules/.cache
       - name: install dependencies
         run: pnpm i --frozen-lockfile
+      - name: build all packages
+        run: pnpm build
       - name: check formatting
         run: pnpm format:ci
       - name: check commit messages
