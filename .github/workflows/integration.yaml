@@ -3,6 +3,8 @@ on: pull_request
 concurrency:
   group: ci_${{ github.head_ref || github.ref || github.run_id }}
   cancel-in-progress: true
+permissions:
+  checks: write
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -35,3 +37,11 @@ jobs:
         run: pnpm lint-commit --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }}
       - name: run tests
         run: pnpm test:ci
+      - name: report tests
+        uses: dorny/test-reporter@v1
+        if: success() || failure()
+        with:
+          name: Tests
+          path: test-results.xml
+          reporter: jest-junit
+          max-annotations: 0 # annotations already provided by vitest reporter
