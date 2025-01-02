@@ -9,7 +9,8 @@
     "format:ci": "prettier --check --ignore-unknown --cache --cache-strategy=content .",
     "lint-commit": "commitlint",
     "common": "pnpm --filter common",
-    "build": "pnpm -r build"
+    "build": "pnpm -r build",
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
@@ -32,7 +33,8 @@
     "lint-staged": "^15.3.0",
     "prettier": "^3.4.2",
     "tsx": "^4.19.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
