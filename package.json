@@ -11,7 +11,7 @@
     "common": "pnpm --filter common",
     "build": "pnpm -r build",
     "test": "vitest",
-    "test:ci": "vitest run --reporter=github-actions"
+    "test:ci": "vitest run --reporter=github-actions --reporter=junit --outputFile=./test-results.xml"
   },
   "repository": {
     "type": "git",
