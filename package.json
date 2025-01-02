@@ -10,7 +10,8 @@
     "lint-commit": "commitlint",
     "common": "pnpm --filter common",
     "build": "pnpm -r build",
-    "test": "vitest"
+    "test": "vitest",
+    "test:ci": "vitest run --reporter=github-actions"
   },
   "repository": {
     "type": "git",
