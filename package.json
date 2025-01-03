@@ -7,6 +7,7 @@
     "prepare": "husky",
     "format": "prettier --write --ignore-unknown .",
     "format:ci": "prettier --check --ignore-unknown --cache --cache-strategy=content .",
+    "lint": "eslint --fix .",
     "lint-commit": "commitlint",
     "common": "pnpm --filter common",
     "build": "pnpm -r build",
@@ -30,11 +31,15 @@
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
+    "@eslint/js": "^9.17.0",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.3.0",
     "prettier": "^3.4.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
+    "typescript-eslint": "^8.19.0",
     "vitest": "^2.1.8"
   },
   "lint-staged": {
