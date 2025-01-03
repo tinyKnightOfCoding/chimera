@@ -8,6 +8,7 @@
     "format": "prettier --write --ignore-unknown .",
     "format:ci": "prettier --check --ignore-unknown --cache --cache-strategy=content .",
     "lint": "eslint --fix .",
+    "lint:ci": "eslint --cache --cache-strategy=content --cache-location=node_modules/.cache/eslint/.eslint-cache .",
     "lint-commit": "commitlint",
     "common": "pnpm --filter common",
     "build": "pnpm -r build",
@@ -37,7 +38,6 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.3.0",
     "prettier": "^3.4.2",
-    "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.19.0",
     "vitest": "^2.1.8"

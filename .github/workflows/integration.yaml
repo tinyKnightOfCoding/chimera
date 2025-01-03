@@ -24,7 +24,7 @@ jobs:
       - name: setup cache
         uses: actions/cache@v4
         with:
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml', '.prettierrc.yaml') }}
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml', '.prettierrc.yaml', 'eslint.config.mjs') }}
           path: ./node_modules/.cache
       - name: install dependencies
         run: pnpm i --frozen-lockfile
@@ -32,6 +32,8 @@ jobs:
         run: pnpm build
       - name: check formatting
         run: pnpm format:ci
+      - name: lint
+        run: pnpm lint:ci
       - name: check commit messages
         if: github.event_name == 'pull_request'
         run: pnpm lint-commit --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }}
